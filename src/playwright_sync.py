@@ -9,4 +9,5 @@ with sync_playwright() as pw:
 
     page = browser.new_page()
     page.goto('http://playwright.dev')
+    page.wait_for_timeout(5000)
     page.screenshot(path="example.png")

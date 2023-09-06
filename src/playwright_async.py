@@ -10,6 +10,7 @@ async def main():
 
         page = await browser.new_page()
         await page.goto('http://playwright.dev')
+        await page.wait_for_timeout(5000)
         await page.screenshot(path="example.png")
 
 
